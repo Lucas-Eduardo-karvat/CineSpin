@@ -1,12 +1,18 @@
-import { movies } from "../data/movies"
-function MovieCard() {
+
+function MovieCard({ filme }) {
   return (
-    <div>{movies.map(movie) => {
-        return <MovieCard>
-            <h1>{movie.title}</h1>
-        </div>
-    }}
+    <div>
+      <h3>{filme.original_title}</h3>
+      <img
+        style={{ width: '220px', height: '330px' }}
+        src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`}
+        alt={filme.title}
+      />
+      <p>Nota: {filme.vote_average}</p>
+      <p>Lançamento: {filme.release_date}</p>
+      <p>Sinopse: {filme.overview}</p>
     </div>
+
   )
 }
 
