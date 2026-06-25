@@ -28,7 +28,7 @@ function App() {
         
       </div>
       
-      <div className="main-content" id="sorteador">
+      <div className="sort-content" id="sorteador">
         <div className="section-title">
           <h2>Sorteador de Filmes</h2>
           <p>Configure os filtros abaixo e clique no dado para sortear.</p>
