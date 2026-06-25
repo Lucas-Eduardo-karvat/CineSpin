@@ -1,0 +1,115 @@
+/* Container que separa Filtros (Esquerda) de Filme (Direita) */
+.sorter-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Coluna estática para filtros, resto para o filme */
+  gap: 30px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Painel de controle lateral */
+.sidebar-controls {
+  width: 100%;
+}
+
+.control-panel {
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filters-title {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+/* Grupo de Selects empilhados na lateral */
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.select-label {
+  font-size: 0.85rem;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: -4px;
+  font-weight: bold;
+}
+
+.filter-select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.filter-select:focus {
+  border-color: #e50914;
+}
+
+/* Botão de sorteio integrado abaixo dos filtros */
+.sort-button {
+  width: 100%; /* Ocupa a largura total da barra lateral */
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e50914;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+  transition: transform 0.2s, background-color 0.2s;
+  margin-top: 10px;
+}
+
+.sort-button:hover {
+  background-color: #f40b16;
+  transform: translateY(-2px);
+}
+
+/* Área do resultado da direita */
+.main-result-display {
+  width: 100%;
+}
+
+.placeholder-text-box {
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  font-style: italic;
+  padding: 40px;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  border: 1px dashed #333;
+}
+
+/* CONTAINER DOS CATÁLOGOS INFERIORES */
+.content-displays {
+  margin-top: 50px;
+}
+
+/* RESPONSIVIDADE (Para telas menores, volta a ser uma coluna só) */
+@media (max-width: 900px) {
+  .sorter-layout {
+    grid-template-columns: 1fr;
+  }
+}

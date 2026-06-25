@@ -1,0 +1,108 @@
+/* Configurações de Reset e Fundo */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Fundo escuro simples */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   BARRA DE NAVEGAÇÃO (NAVBAR)
+   ========================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Esquerda, Centro e Direita */
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #e50914; /* Linha vermelha clássica */
+}
+
+/* Logo na esquerda superior */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e50914;
+}
+
+/* Links no meio */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #e50914;
+  padding-bottom: 4px;
+}
+
+/* Ações na direita (Botão Modo Noturno) */
+.theme-toggle-btn {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #3a3a3a;
+}
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+   ========================================== */
+.main-content {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #666;
+  margin: 0;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2a2a;
+}

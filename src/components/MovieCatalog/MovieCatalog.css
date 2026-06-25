@@ -1,0 +1,91 @@
+/* ==========================================================================
+   1. REGRAS DO CATÁLOGO DE FUNDO (MovieCatalog.jsx)
+   Efeito papel de parede decorativo, estático e preto e branco
+   ========================================================================== */
+.catalog-bg-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;          /* Garante que fica atrás de absolutamente tudo */
+  opacity: 0.08;        /* Quase invisível (8% de opacidade) para não atrapalhar a leitura */
+  pointer-events: none; /* Bloqueia cliques; o usuário interage com o site normalmente */
+  overflow: hidden;     /* Corta o que passar da tela, sem criar barras de rolagem */
+  padding: 10px;
+}
+
+.bg-images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.bg-poster-img {
+  width: 140px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: grayscale(100%); /* Remove a cor para não brigar com o design do site */
+}
+
+/* ==========================================================================
+   2. REGRAS DO CATÁLOGO ATIVO/FILTRADO (MovieCatalogFilters.jsx)
+   Vitrine convencional que aparece no meio da página
+   ========================================================================== */
+.catalog-filtered-wrapper {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+}
+
+.catalog-section-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-left: 4px solid #e50914; /* Barrinha vermelha estilo Netflix */
+  padding-left: 10px;
+}
+
+.filtered-images-grid {
+  display: grid;
+  /* Cria colunas responsivas: o tamanho mínimo é 160px, se couber mais, ele estica */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.filtered-poster-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+/* Efeito básico de hover no catálogo ativo */
+.filtered-poster-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(229, 9, 20, 0.3);
+}
+
+/* ==========================================================================
+   3. ESTILO DE AVISO / ERRO
+   ========================================================================== */
+.catalog-error-wrapper {
+  margin-top: 40px;
+  text-align: center;
+  padding: 30px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+}
+
+.no-movies-text {
+  color: #666;
+  font-size: 1.1rem;
+}
