@@ -1,29 +1,17 @@
-/* ==========================================
-   1. RESET GLOBAL
-   Aplica a todos os elementos do site
-   ========================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ==========================================
-   2. ESTILOS DO CORPO (BODY)
-   Define a identidade visual base de todo o app
-   ========================================== */
 body {
-  background-color: #121212; /* Fundo escuro de cinema */
+  background-color: #121212; 
   font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff; /* Texto global passa a ser branco */
+  color: #ffffff; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* ==========================================
-   3. CONFIGURAÇÃO DO REACT (#ROOT)
-   Garante que o container do React ocupe a tela toda
-   ========================================== */
 #root {
   min-height: 100vh;
 }

@@ -1,12 +1,10 @@
 import React from 'react'
-import './MovieCard.css' // <-- ADICIONE ESSA LINHA
+import './MovieCard.css' 
 
 function MovieCard({ filme }) {
   if (!filme) return null;
 
   const mapearGeneros = (ids) => {
-    if (!ids || ids.length === 0) return "Não informado";
-    
     const listaGeneros = {
       28: "Ação", 12: "Aventura", 16: "Animação", 35: "Comédia", 80: "Crime",
       99: "Documentário", 18: "Drama", 10751: "Família", 14: "Fantasia",
@@ -15,12 +13,11 @@ function MovieCard({ filme }) {
       53: "Thriller", 10752: "Guerra", 37: "Faroeste"
     };
 
-    return ids.slice(0, 3).map(id => listaGeneros[id] || "Outro").join(", ");
+    return ids.map(id => listaGeneros[id] || "Outro").join(", ");
   };
 
   return (
     <div className="movie-card">
-
       <div className="movie-poster">
         {filme.poster_path && (
           <img 
@@ -44,11 +41,11 @@ function MovieCard({ filme }) {
         </div>
 
         <div className="movie-genres">
-          <strong>Gênero:</strong> {mapearGeneros(filme.genre_ids)}
+          <strong className="title-movie-genres">Gênero:</strong> {mapearGeneros(filme.genre_ids)}
         </div>
 
         <div className="movie-overview">
-          <strong>Sinopse:</strong> {filme.overview || "Sinopse não disponível em português."}
+          <strong className="title-movie-overview">Sinopse:</strong> {filme.overview || "Sinopse não disponível."}
         </div>
       </div>
 
